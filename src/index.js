@@ -38,7 +38,9 @@ app.use(express.json());
 app.use('/public',express.static(path.join(__dirname,'public')))
 
 
-
+app.get('/',(req,res)=>{
+    return "welcome :)";
+})
 app.post('/uploadimages',upload.single('image'),(req,res)=>{
     console.log(req.body)
 
