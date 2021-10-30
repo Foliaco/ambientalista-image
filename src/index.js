@@ -39,7 +39,7 @@ app.use('/public',express.static(path.join(__dirname,'public')))
 
 
 app.get('/',(req,res)=>{
-    return "welcome :)";
+    return res.send("welcome :)");
 })
 app.post('/uploadimages',upload.single('image'),(req,res)=>{
     console.log(req.body)
@@ -55,7 +55,7 @@ app.post('/uploadimages',upload.single('image'),(req,res)=>{
     else{
         
             connecion.query(`insert into publicaciones(id_publicacion,title,body,image,fecha,usuario,archivado) values(null, '${title}',
-                    '${body}','${'http://localhost:4000/public/'+nameimage}',null,${persona},0)`,null,(err,row)=>{
+                    '${body}','${'https://ambientalista-images.herokuapp.com/public/'+nameimage}',null,${persona},0)`,null,(err,row)=>{
                         if(err){
                             console.log(err)
                             return res.json({
