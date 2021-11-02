@@ -1,7 +1,10 @@
 require('dotenv').config();
 const mysql=require('mysql');
-const coneccion=mysql.createConnection({host:'node82715-env-8156362.jelastic.saveincloud.net',
-                                        database:'colegio_ambientalista',user:'root',password:'VDliGecnLc'})
+const coneccion=mysql.createConnection({
+                                host:process.env.DB_HOST,
+                                database:process.env.DB_NAME,
+                                user:process.env.DB_USER,
+                                password:process.env.DB_PASS})
 
 coneccion.connect(err=>{
     if(err){
