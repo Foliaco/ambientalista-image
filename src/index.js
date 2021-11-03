@@ -71,6 +71,7 @@ app.post('/uploadimages',upload.single('image'),(req,res)=>{
                         })
                         
                     })
+            connecion.destroy();
     }
 })
 
