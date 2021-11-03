@@ -1,4 +1,5 @@
 require('dotenv').config();
+//const db=require('./database/index');
 const express =require('express');
 const path=require('path');
 const connecion=require('./database/index');
@@ -60,7 +61,8 @@ app.post('/uploadimages',upload.single('image'),(req,res)=>{
                             console.log(err)
                             return res.json({
                                 res:false,
-                                msj:'error en la base de datos'
+                                msj:'error en la base de datos',
+                                err:err
                             })
                         }
                         return res.json({
