@@ -71,8 +71,8 @@ app.post('/uploadimages',upload.single('image'),(req,res)=>{
                         })
                         
                     })
-            connecion.destroy();
-    }
+                }
+        connecion.destroy();
 })
 
 app.set('port',process.env.PORT);
