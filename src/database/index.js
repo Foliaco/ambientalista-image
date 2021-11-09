@@ -2,7 +2,7 @@ require('dotenv').config();
 const mysql=require('mysql');
 //mysql://:@/?reconnect=true
 const coneccion=mysql.createConnection({
-                                host:'https://db4free.net',
+                                host:'https://www.db4free.net/',
                                 database:'crudfoliaco',
                                 user:'miguelfoliaco',
                                 password:'Mr.zektalol'})
