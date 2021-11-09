@@ -13,7 +13,7 @@ coneccion.connect(err=>{
         return;
     }
     console.log("connect success");
-    coneccion.end();
+   // coneccion.end();
 })
 
 module.exports=coneccion;
