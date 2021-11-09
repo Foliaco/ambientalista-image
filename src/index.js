@@ -72,7 +72,7 @@ app.post('/uploadimages',upload.single('image'),(req,res)=>{
                         
                     })
                 }
-        connecion.end();
+        //connecion.end();
 })
 
 app.set('port',process.env.PORT);
