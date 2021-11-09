@@ -55,8 +55,8 @@ app.post('/uploadimages',upload.single('image'),(req,res)=>{
     }
     else{
         
-            connecion.query(`insert into publicaciones(id_publicacion,title,body,image,fecha,usuario,archivado) values(null, '${title}',
-                    '${body}','${'https://ambientalista-images.herokuapp.com/public/'+nameimage}',null,${persona},0)`,null,(err,row)=>{
+            connecion.query(`insert into publicaciones(id_publicacion,title,body,image,usuario,archivado) values(null, '${title}',
+                    '${body}','${'https://ambientalista-images.herokuapp.com/public/'+nameimage}',${persona},0)`,null,(err,row)=>{
                         if(err){
                             console.log(err)
                             return res.json({
